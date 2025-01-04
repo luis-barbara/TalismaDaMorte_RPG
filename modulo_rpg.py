@@ -10,8 +10,8 @@ import main
 
 #Modelo Jogador
 class Jogador:
-    def __init__(self, skill = 8, stamina = 10, luck = 5):
-        self.nome = ""
+    def __init__(self, nome = "", skill = 8, stamina = 10, luck = 5):
+        self.nome = nome
 	    self.skill = skill
 	    self.stamina = stamina
         self.luck = luck
@@ -30,3 +30,23 @@ class Jogador:
         self.nome = nome
         print("Personagem criado com sucesso!")
         return 1
+
+    def mostrarEquipamento(self)
+        # Aceder ao dicionário de equipamentos
+        equip_info = ""
+        for chave, valor in self.equipCombate.items():
+            equip_info += f"Equipamento: {chave} - {valor}\n"
+        
+        # Verificar se as listas têm valores antes de aceder
+        refeicoes = self.refeicoes[0] if self.refeicoes else "Nenhuma refeição"
+        porcoes = self.porcoes[0] if self.porcoes else "Nenhuma porção"
+        ouro = self.ouro[0] if self.ouro else "Nenhum ouro"
+        joias = self.joias[0] if self.joias else "Nenhuma jóia"
+        
+        return f"{equip_info}Refeições: {refeicoes}\nPorções: {porcoes}\nOuro: {ouro}\nJóias: {joias}"
+
+
+    def mostrarScores(self)
+        return f"Skill: {self.skill}, Stamina: {self.stamina}, Luck: {self.luck}"
+
+
